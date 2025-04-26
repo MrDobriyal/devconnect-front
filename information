@@ -1,0 +1,6 @@
+npm install -D tailwindcss postcss autoprefixer
+-d =--save-dev flag
+postcss =PostCSS is used to process your CSS file and remove any unused styles ,making the final build smaller and more efficient.
+autoprefixer = Autoprefixer is a PostCSS plugin that automatically adds browser vendor prefixes to your CSS rules to ensure compatibility across all browsers.
+For example, modern CSS might use properties like display: grid;, but older browsers require a prefix like -ms-grid to support it.
+Autoprefixer analyzes your CSS and automatically adds the necessary prefixes for the target browsers you want to support (defined in a .browserslistrc file or in the Tailwind config).
