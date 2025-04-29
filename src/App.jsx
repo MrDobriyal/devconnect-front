@@ -12,6 +12,7 @@ import ChatRoom from './pages/ChatRoom';
 import PrivateRoute from './components/PrivateRoute';
 import Profile from './pages/Profie';
 import Navbar from './components/NavBar';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/create-post" element={<PrivateRoute><CreatePost /></PrivateRoute>} />
           <Route path="/chat/:conversationId" element={<PrivateRoute><ChatRoom /></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/search" element={<PrivateRoute><SearchPage /></PrivateRoute>} />
+          <Route path="/profile/:userId" element={<PrivateRoute><Profile /></PrivateRoute>} />
       </Routes>
     </PostProvider>
     </ConversationProvider>

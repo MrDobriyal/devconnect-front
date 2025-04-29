@@ -1,6 +1,7 @@
 import React, { useContext,useState,useEffect } from 'react'
 import { AuthContext } from '../context/AuthContext';
 import {PostContext} from '../context/PostContext';
+import { Link } from 'react-router-dom'
 
 export default function PostCard({post}) {
     const {user,loading} = useContext(AuthContext);
@@ -56,7 +57,9 @@ export default function PostCard({post}) {
     <div className="bg-white shadow p-4 rounded mb-4">
   {/* Author Info */}
   <div className="flex items-center mb-2">
+  <Link to={`/profile/${post.author._id}`}>
     <img src={`http://localhost:5000/${post?.author?.profilePicture}`} className="w-10 h-10 rounded-full mr-2" alt="User" />
+  </Link>
     <div>
       <p className="font-semibold">{post?.author?.name}</p>
       <p className="text-sm text-gray-500">{new Date(post.createdAt).toLocaleString()}</p>

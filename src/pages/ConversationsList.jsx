@@ -35,7 +35,7 @@ const ConversationsList = () => {
 
   return (
     
-    <div className="p-4">
+    <div className="p-4 md:ml-64  flex-1 flex flex-col p-4">
       <h2 className="text-lg font-semibold mb-2">Start a New Chat</h2>
       {users.map((u) => (
         <div key={u._id} className="flex items-center justify-between mb-2 bg-gray-100 p-2 rounded">
